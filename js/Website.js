@@ -33,4 +33,19 @@ jQuery(function() {
 		
 	});
 	
+	jQuery('#steampunk-img a').click(function() {
+		var _s = jQuery('#steampunk-control-img').attr('src').split('/')[2].split('.')[0];
+		var _nS = false;
+		if (_s == 'play') {
+			_nS = 'stop';
+			game.unpause();
+		} else {
+			_nS = 'play';
+			game.pause();
+		} 
+		jQuery('#steampunk-control-img').attr('src', './images/' + _nS + '.png');
+			
+		return true;		
+	});
+	
 });
