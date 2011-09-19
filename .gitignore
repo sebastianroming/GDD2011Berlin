@@ -5,6 +5,5 @@
 
 #others
 
-js/all.js
-js/all.min.js
+js/all.*
 
