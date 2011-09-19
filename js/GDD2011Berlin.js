@@ -13,7 +13,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  
- @url https://github.com/sethladd/Bad-GtugLogos
+ @url https://github.com/sethladd/Bad-Aliens
  
  */
 
@@ -34,9 +34,10 @@ DIRECTION = {
     up: "up",
     down: "down",
     left: "left",
-    right: "right"
+    right: "right",
+    clockwise: 1,
+    counterclockwise: -1
 }
-
 
 window.requestAnimFrame = (function() {
     return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
@@ -585,7 +586,7 @@ Smoker.prototype.makeParticle = function() {
 
 }
 
-function Rotator(game, image, x, y, speed) {
+function Rotator(game, image, x, y, speed, direction) {
     Entity.call(this, game);
 
     this.x = x;
@@ -595,7 +596,7 @@ function Rotator(game, image, x, y, speed) {
     this.speed = speed;
     this.image = image;
     this.drawn = false;
-    this.direction = ((Math.random() * 2 - 1) > 0) ? -1 : 1;
+    this.direction = direction;
     this.sprite = this.rotateAndCache(ASSET_MANAGER.getAsset(this.image), this.angle);
     this.radius = this.sprite.height / 2;
 }
@@ -662,10 +663,10 @@ Gdd2011Berlin.prototype.start = function() {
     this.gtuglogo = new GtugLogo(this);
 
     //let's have some action
-    this.addEntity(new Rotator(this, ASSETS_IMAGE.gear_1, 230, 215, 2));
-    this.addEntity(new Rotator(this, ASSETS_IMAGE.gear_2, 240, 105, 1));
-    this.addEntity(new Rotator(this, ASSETS_IMAGE.gear_3, 340, 210, 2));
-    this.addEntity(new Rotator(this, ASSETS_IMAGE.gear_4, 410, 160, 1));
+    this.addEntity(new Rotator(this, ASSETS_IMAGE.gear_1, 230, 215, 2, DIRECTION.clockwise));
+    this.addEntity(new Rotator(this, ASSETS_IMAGE.gear_2, 240, 105, 1, DIRECTION.counterclockwise));
+    this.addEntity(new Rotator(this, ASSETS_IMAGE.gear_3, 340, 210, 2, DIRECTION.clockwise));
+    this.addEntity(new Rotator(this, ASSETS_IMAGE.gear_4, 410, 160, 1, DIRECTION.counterclockwise));
 
     //let's see it
     this.addEntity(this.gtuglogo);
@@ -715,7 +716,6 @@ Gdd2011Berlin.prototype.pause = function() {
 Gdd2011Berlin.prototype.unpause = function() {
     console.log("doodle animation has been restarted");
     this.isPaused = false;
-    this.start();
 }
 
 var canvas = document.getElementById('surface');

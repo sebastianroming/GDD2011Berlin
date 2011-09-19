@@ -74,7 +74,7 @@ a:hover {
 
 h1 {
 	font-weight:800;
-	line-height:40px;
+	line-height:43px;
 	color:#104660;
 	text-align:right;
 }
@@ -104,6 +104,7 @@ h3 {
 .text-right {text-align:right;}
 .text-right * {text-align:right;}
 .space-18 {margin-bottom:18px;}
+.weight-400 {font-weight:400;}
 
 .section-heading {
 	margin:50px 0 40px 0;
@@ -122,7 +123,7 @@ article {
 }
 
 article ul {
-	margin:20px 10px;
+	margin:17px 10px;
 }
 
 article ul li {
@@ -281,6 +282,7 @@ article img {
 .gdd-content-intro {
 	margin:33px 0 0 0;
 	color:#666666;
+	line-height:17px;
 }
 
 .gdd-content-location {
@@ -291,12 +293,13 @@ article img {
 	color:#19ACF8;
 	height:27px;
 	text-align:right;
-	margin:33px 0 0 90px;
+	margin:35px 0 0 90px;
 }
 
 .gdd-content-address {
 	color:#10475E;
 	text-align:right;
+	margin-top:-2px;
 }
 
 .gdd-articles-content {
@@ -323,7 +326,7 @@ article img {
 }
 
 #gdd-cbase-oeffi {
-	margin:64px 0 0 0;
+	margin:14px 0 0 0;
 }
 
 #gdd-cbase-oeffi img {
@@ -525,4 +528,21 @@ button.signup {
 	z-index:10000;
 	text-align:right;
 	background:transparent;
+}
+
+#gdd-article-date h1 {
+	margin-top:-3px;
+}
+
+.sponsor {
+	float:left;
+	margin-right:15px;
+}
+
+.sponsor-headline {
+	margin-bottom:10px;
+}
+
+#behind-teaser {
+	margin-top:40px;
 }
