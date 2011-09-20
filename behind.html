@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html>
-	
 	<head>
 		
 		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
@@ -9,9 +7,10 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800' rel='stylesheet' type='text/css'>
 		<link rel='stylesheet' type='text/css' href='./css/GDD2011Berlin.css' />
 		<link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
-		
+		<script type='text/javascript'>
+				var GDD2011BERLIN_VERSION = "20110920_1";
+		</script>		
 	</head>
-	
 	<body>
 		<a name='top'></a>
 		<div id='gdd-bar'></div>
@@ -40,7 +39,7 @@
 				</div>
 				
 				<div id='plusone'>
-					<g:plusone size="medium"></g:plusone>
+					<div class="g-plusone" data-size="medium"></div>
 				</div>
 				
 			</div>
@@ -152,7 +151,15 @@
 			All rights reserved &copy;2011 | special thanks to: <a href='http://www.stefanhoth.de'>Stefan Hoth</a> (Developer), <a href='http://www.sebastianroming.de'>Sebastian Roming</a> (Developer) and <a href='http://www.marie-schweiz.de'>Marie Schweiz</a> (Artdirection)<br /><br />
 			Press Contact: <a href='https://plus.google.com/113799277735885972934/'>Nils Hitze</a>, <a href='https://plus.google.com/107100127479392600261/'>Friedger Müffke</a>, <a href='https://plus.google.com/103167972505759924450/'>Richard Meinsen</a> (Organisation)
 		</div>
-		<script type='text/javascript' src='./js/all.min.js'></script>
+		<script type='text/javascript'>
+			(function() {
+				var gdd2011berlin = document.createElement('script'); 
+				gdd2011berlin.type = 'text/javascript';
+				gdd2011berlin.async = true;
+				gdd2011berlin.src = './js/all.min.'+GDD2011BERLIN_VERSION+'.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gdd2011berlin, s);
+			})();
+		</script>
 		<script type='text/javascript'>
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-25711861-1']);
