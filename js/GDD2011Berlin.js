@@ -18,16 +18,16 @@
  */
 
 ASSETS_IMAGE = {
-    gtuglogo: "images/doodle.png",
-    arrow: "images/arrow.png",
-    cloud_1: "images/wolke-1.png",
-    cloud_2: "images/wolke-2.png",
-    cloud_3: "images/wolke-3.png",
-    gear_1: "images/zahnrad-1.png",
-    gear_2: "images/zahnrad-2.png",
-    gear_3: "images/zahnrad-3.png",
-    gear_4: "images/zahnrad-4.png",
-    smoke: "images/ParticleSmoke.png"
+    gtuglogo: "images/doodle/doodle.png",
+    arrow: "images/doodle/arrow.png",
+    cloud_1: "images/doodle/wolke-1.png",
+    cloud_2: "images/doodle/wolke-2.png",
+    cloud_3: "images/doodle/wolke-3.png",
+    gear_1: "images/doodle/zahnrad-1.png",
+    gear_2: "images/doodle/zahnrad-2.png",
+    gear_3: "images/doodle/zahnrad-3.png",
+    gear_4: "images/doodle/zahnrad-4.png",
+    smoke: "images/doodle/ParticleSmoke.png"
 }
 
 DIRECTION = {

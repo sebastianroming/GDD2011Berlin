@@ -1,0 +1,9 @@
+
+# eclipse stuff
+.project
+.settings/
+
+#others
+
+js/all.*
+
