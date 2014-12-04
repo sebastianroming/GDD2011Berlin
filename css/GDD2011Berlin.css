@@ -534,18 +534,9 @@ button.signup {
 	margin-top:-3px;
 }
 
-.sponsors-container{
-	margin:100px 0 0 0;
-	display: inline-block;
-}
-
-.sponsors-container h3.size-22 {
-	margin:30px 0 0 0;
-}
-
 .sponsor {
 	float:left;
-	margin:0 5px 40px 0;
+	margin-right:15px;
 }
 
 .sponsor-headline {
